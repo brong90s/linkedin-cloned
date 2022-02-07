@@ -4,12 +4,12 @@ import ExploreIcon from "@mui/icons-material/Explore"
 import GroupIcon from "@mui/icons-material/Group"
 import OndemanVideoShapeIcon from "@mui/icons-material/OndemandVideoSharp"
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter"
-import ArrowForwardIosRounded from "@mui/icons-material/ArrowForwardIosRounded"
+import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded"
 import HeaderLink from "../components/HeaderLink"
 
 const home = () => {
   return (
-    <div>
+    <div className="space-y-10 relative">
       <header className="flex justify-around items-center py-4">
         <div className="relative w-36 h-10">
           <Image src="https://rb.gy/vtbzlp" layout="fill" objectFit="contain" />
@@ -28,6 +28,32 @@ const home = () => {
           </div>
         </div>
       </header>
+
+      <main className="flex flex-col xl:flex-row items-center max-w-screen-lg mx-auto">
+        <div className="space-y-6 xl:space-y-10">
+          <h1 className="text-3xl md:text-5xl text-amber-800/80 max-w-xl !leading-snug pl-4 xl:pl-0">
+            Welcome to your professional community
+          </h1>
+          <div className="space-y-4">
+            <div className="intent">
+              <h2 className="text-xl">Search for a job</h2>
+              <ArrowForwardIosRoundedIcon />
+            </div>
+            <div className="intent">
+              <h2 className="text-xl">Find a person you know</h2>
+              <ArrowForwardIosRoundedIcon />
+            </div>
+            <div className="intent">
+              <h2 className="text-xl">Learn a new skill</h2>
+              <ArrowForwardIosRoundedIcon />
+            </div>
+          </div>
+        </div>
+
+        <div className="relative xl:absolute w-80 h-80 xl:w-[650px] xl:h-[650px] top-14 right-5">
+          <Image src="https://rb.gy/vkzpzt" layout="fill" priority />
+        </div>
+      </main>
     </div>
   )
 }
