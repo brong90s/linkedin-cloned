@@ -6,10 +6,15 @@ import OndemanVideoShapeIcon from "@mui/icons-material/OndemandVideoSharp"
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter"
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded"
 import HeaderLink from "../components/HeaderLink"
+import Head from "next/head"
 
 const home = () => {
   return (
     <div className="space-y-10 relative">
+      <Head>
+        <title>LinkedIn</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <header className="flex justify-around items-center py-4">
         <div className="relative w-36 h-10">
           <Image src="https://rb.gy/vtbzlp" layout="fill" objectFit="contain" />
