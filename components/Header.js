@@ -8,6 +8,7 @@ import HomeRoundedIcon from "@mui/icons-material/HomeRounded"
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined"
 import { Avatar } from "@mui/material"
 import Image from "next/image"
+import HeaderLink from "./HeaderLink"
 
 const Header = () => {
   return (
@@ -26,6 +27,24 @@ const Header = () => {
       </div>
 
       {/* Right */}
+      <div className="flex items-center space-x-6">
+        <HeaderLink Icon={HomeRoundedIcon} text="Home" feed active />
+        <HeaderLink Icon={GroupIcon} text="My Network" feed />
+        <HeaderLink Icon={BusinessCenterIcon} text="Jobs" feed hidden />
+        <HeaderLink Icon={ChatIcon} text="Messaging" feed />
+        <HeaderLink Icon={NotificationsIcon} text="Notification" feed />
+        <HeaderLink Icon={Avatar} text="Me" feed avatar hidden />
+        <HeaderLink Icon={AppsOutlinedIcon} text="Work" feed hidden />
+
+        {/* Dark mode toggle */}
+        <div
+          className={`bg-gray-600 flex items-center px-0.5 rounded-full h-6 w-12 cursor-pointer flex-shrink-0 relative`}
+        >
+          <span className="absolute left-0">🌜</span>
+          {/* motion.div */}
+          <span className="absolute right-0.5">🌞</span>
+        </div>
+      </div>
     </header>
   )
 }
